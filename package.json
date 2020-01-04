@@ -1,0 +1,30 @@
+{
+  "name": "panam",
+  "version": "1.0.0",
+  "description": "Spanish teaching aid: this is a web site for a fake travel company",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timburr1/panam.git"
+  },
+  "author": "Tim Burr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timburr1/panam/issues"
+  },
+  "homepage": "https://github.com/timburr1/panam#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

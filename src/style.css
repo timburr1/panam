@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  color: #333;
+}
+
+header {
+  background-color: #9900cc;
+}
+
+body {
+  background-color: #ccffff;
+  margin: 0;
+  font-family: Tahoma, Geneva, Verdana, Arial, sans-serif;
+}
+
+form {
+  margin: 25;
+}
