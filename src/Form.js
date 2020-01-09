@@ -1,10 +1,8 @@
 const Form = () => {    
     
-    return(
-        <div>
-            <form>Form goes here</form>
-        </div>
-    );
+    return React.createElement("div", {}, [
+        React.createElement("form", {}, ["Form goes here."]),
+    ])
 };
 
 export default Form;
