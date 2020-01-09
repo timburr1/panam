@@ -1,40 +1,37 @@
-const Form = () => {    
-    
-    return React.createElement("div", {}, [
-        React.createElement("form", {}, ["Form goes here."]),
-    ])
+import React from "react";
+
+export const Form = ({
+  destination,
+  isRoundTrip,
+  departDate,
+  passengerName,
+  passengerBirthday,
+  numPassengers,
+  numBags
+}) => {
+  //   return React.createElement("div", {}, [
+  //     React.createElement("form", {}, [
+  //       React.createElement("h2", {}, "Destination: " + destination),
+  //       React.createElement("h2", {}, "Round Trip? " + isRoundTrip),
+  //       React.createElement("h2", {}, "Departure Date: " + departDate),
+  //       React.createElement("h2", {}, "Passenger Name: " + passengerName),
+  //       React.createElement("h2", {}, "Birthday: " + passengerBirthday),
+  //       React.createElement("h2", {}, "Passengers: " + numPassengers),
+  //       React.createElement("h2", {}, "Bags: " + numBags)
+  //     ])
+  //   ]);
+
+  return (
+    <div>
+      <form>
+        <h2>Destino: {destination}</h2>
+        <h2>Fecha de Ida: {departDate.toString()}</h2>
+        <h2>Ida y Vuelta? {isRoundTrip}</h2>
+        <h2>Nombre de Pasajero: {passengerName}</h2>
+        <h2>Fecha de Nacimiento: {passengerBirthday.toString()}</h2>
+        <h2>Pasajeros: {numPassengers}</h2>
+        <h2>Maletas: {numBags}</h2>
+      </form>
+    </div>
+  );
 };
-
-export default Form;
-
-/*<form onSubmit={this._handleSubmit}>        
-        Destino: {<input type="text" value={destination} /><br /><br /> 
-        <div className="radio">
-          <label>
-            <input 
-              type="radio" 
-              name="isRoundTrip" 
-              value="true"
-              checked={isRoundTrip === true}
-              onChange={this._handleRadio} />
-            Ida y Vuelta
-          </label>
-       </div>
-       <div className="radio">
-         <label>
-           <input 
-             type="radio" 
-             name="isRoundTrip" 
-             value="false"
-             checked={isRoundTrip === false}
-             onChange={this._handleRadio} />
-           Solo Ida
-         </label>
-    </div> 
-        DEPART DATE; RETURN DATE <br />< br />
-        ¿Cual es tu apellido? <input type="text" value={passengerName} /><br /><br />
-        Fecha de nacimiento <input type="date" value={passengerBirthday} /><br/><br/> 
-        ¿Cuántos pasajeros? <input type="number" value={numPassengers} /><br /><br />
-    ¿Cuántas maletas? <input type="number" value={numBags} /><br/><br/> 
-        <button type="submit">Submit</button>
-      </form>*/
