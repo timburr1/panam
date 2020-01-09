@@ -5,20 +5,27 @@ import { Router, Link } from "@reach/router";
 const App = () => {
   //const { destination, isRoundTrip, departDate, returnDate, passengerName, passengerGender, numPassengers, numBags } = trip;
 
+  const [destination, updatedDestination] = useState("Meridian, ID");
+  const isRoundTrip = useState(true);
+  const passengerName = useState("Fake Nombre");
+  const passengerBirthday = useState(new Date(1, 1, 2000));
+  const numPassengers = useState(1);
+  const numBags = useState(1);
+
   return (
     <div>      
       <h1>¡Bienvenidos a Aerolínea PanAmerica!</h1> 
         
-      {/* <form>
-        Destino: <input id="destination" type="text" value={destination} placeholder="Tu destino" /><br /><br />
-        <input type="radio" value={isRoundTrip}  checked /> Solo Ida 
-        <input type="radio" value={!isRoundTrip} /> Ida y Vuelta<br /><br />
-        DEPART DATE; RETURN DATE <br />
-        ¿Cual es tu apellido? <input type="text" id="passengerName" value={passengerName} placeholder="Tu nombre"/><br /><br />
-        Fecha de nacimiento <input type="date" id="passengerBirthday" value={passengerBirthday} /><br/><br/>
-        ¿Cuántos pasajeros? <input type="number" id="numPassengers" value={numPassengers} /><br /><br />
-        ¿Cuántas maletas? <input type="number" id="numBags" id={numBags} /><br/><br/>
-      </form>  */}
+      <form>        
+        Destino: <input type="text" value={destination} /><br /><br />
+        Solo Ida o Ida y Vuelta?<br /><br />
+        DEPART DATE; RETURN DATE <br />< br />
+        ¿Cual es tu apellido? <input type="text" value={passengerName} /><br /><br />
+        Fecha de nacimiento <input type="date" value={passengerBirthday} /><br/><br/> 
+        ¿Cuántos pasajeros? <input type="number" value={numPassengers} /><br /><br />
+        ¿Cuántas maletas? <input type="number" value={numBags} /><br/><br/>
+        <button>Submit</button>
+      </form>  
     </div>
   );
 };
