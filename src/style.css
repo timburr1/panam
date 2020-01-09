@@ -8,17 +8,28 @@ header {
   font-family: Tahoma, Geneva, Verdana, Arial, sans-serif;
   font-size: x-large;
   font-weight: bold;
+  justify-content: space-between;
+  padding: 10px 10px 10px 10px;
 }
 
 body {
   background-color: #ccffff;
-  margin: 0;
+  margin: 10px auto;
+  width: 90%;
   font-family: Tahoma, Geneva, Verdana, Arial, sans-serif;
 }
 
 form {
   background-color: #29b4f5;
-  margin: 25;
+  width: 830px;
+  margin: 0px 25px 0px 0px;
+  padding: 1px 15px 15px 15px;
+  border-radius: 5px;
+  float: left;
   font-family: Tahoma, Geneva, Verdana, Arial, sans-serif;
 }
 
+footer {
+  font-size: 1em;
+  font-family: Tahoma, Geneva, Verdana, Arial, sans-serif;
+}

@@ -34,6 +34,33 @@ export const Form = ({}) => {
             </select>
           </h2>
         </label>
+        <label htmlFor="isRoundTrip">
+          <h2>Tipo de Viaje:</h2>
+          <h3>
+            <div className="radio">
+              <label>
+                <input
+                  type="radio"
+                  name="isRoundTrip"
+                  value={!isRoundTrip}
+                  checked={!isRoundTrip}
+                  onChange={event => setRoundTrip(!event.target.value)}
+                />
+                Solo Ida
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="isRoundTrip"
+                  value={isRoundTrip}
+                  checked={isRoundTrip}
+                  onChange={event => setRoundTrip(event.target.value)}
+                />
+                Ida y Vuelta
+              </label>
+            </div>
+          </h3>
+        </label>
         <label htmlFor="departDate">
           <h2>
             Fecha de Ida:
@@ -45,9 +72,21 @@ export const Form = ({}) => {
             />
           </h2>
         </label>
-        <label htmlFor="isRoundTrip">
-          <h2>Tipo de Viaje: Solo Ida o Ida y Vuelta?</h2>
-        </label>
+        {isRoundTrip === true ? (
+          <label htmlFor="returnDate">
+            <h2>
+              Fecha de Volver:
+              <input
+                id="returnDate"
+                value={returnDate.toString()}
+                type="date"
+                onChange={event => setReturnDate(event.target.value)}
+              />
+            </h2>
+          </label>
+        ) : (
+          ""
+        )}
         <label htmlFor="passengerName">
           <h2>
             Nombre de Pasajero:

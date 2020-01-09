@@ -7,6 +7,8 @@ const App = () => {
   return (
     <div>
       <header>¡Bienvenidos a Aerolínea PanAmerica!</header>
+      <br />
+      <br />
       <Form />
     </div>
   );
