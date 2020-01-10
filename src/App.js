@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import { Router, Link } from "@reach/router";
+import { Form } from "./Form";
 
 const App = () => {
-    //TODO
+  return (
+    <div>
+      <header>¡Bienvenidos a Aerolínea PanAmerica!</header>
+      <br />
+      <br />
+      <Form />
+    </div>
+  );
 };
 
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
