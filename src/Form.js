@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export const Form = ({}) => {
+export const Form = () => {
   const [destination, setDestination] = useState("Madrid, Espana (MAD)");
   const [isRoundTrip, setRoundTrip] = useState(true);
   const [departDate, setDepartDate] = useState(new Date());
@@ -41,20 +41,20 @@ export const Form = ({}) => {
               <label>
                 <input
                   type="radio"
-                  name="isRoundTrip"
-                  value={!isRoundTrip}
-                  checked={!isRoundTrip}
-                  onChange={event => setRoundTrip(!event.target.value)}
+                  name="oneWay"
+                  value={isRoundTrip === false}
+                  checked={isRoundTrip === false}
+                  onChange={event => setRoundTrip(false)}
                 />
                 Solo Ida
               </label>
               <label>
                 <input
                   type="radio"
-                  name="isRoundTrip"
-                  value={isRoundTrip}
-                  checked={isRoundTrip}
-                  onChange={event => setRoundTrip(event.target.value)}
+                  name="roundTrip"
+                  value={isRoundTrip === true}
+                  checked={isRoundTrip === true}
+                  onChange={event => setRoundTrip(true)}
                 />
                 Ida y Vuelta
               </label>

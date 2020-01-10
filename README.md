@@ -20,3 +20,11 @@ CSS: https://developer.mozilla.org/en-US/docs/Web/CSS
 React: https://reactjs.org/docs/rendering-elements.html  
 Azure Fundamentals: https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/setup   
 Azure Node.js Quickstart: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejscontinuous  
+
+# TODO
+submit button -> display trip details
+azure deploy
+
+format datepickers
+center buttons in form div
+copyright footer
