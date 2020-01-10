@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Details } from "./Details";
 
 export const Form = () => {
   const [destination, setDestination] = useState("Madrid, Espana (MAD)");
@@ -11,6 +12,7 @@ export const Form = () => {
   );
   const [numPassengers, setNumPassengers] = useState(1);
   const [numBags, setNumBags] = useState(1);
+  const [showDetails, setShowDetails] = useState(false);
 
   return (
     <div className="form">
@@ -131,9 +133,12 @@ export const Form = () => {
             />
           </h2>
         </label>
-        <button>Reset</button>
-        <button>Submit</button>
+        <div>
+          <button>Reset</button>
+          <button onClick={() => setShowDetails(true)}>Submit</button>
+        </div>
       </form>
+      {showDetails === true ? <Details /> : ""}
     </div>
   );
 };

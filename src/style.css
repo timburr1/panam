@@ -21,8 +21,30 @@ body {
 
 form {
   background-color: #29b4f5;
-  width: 830px;
+  width: 490px;
   margin: 0px 25px 0px 0px;
+  padding: 1px 15px 15px 15px;
+  border-radius: 5px;
+  float: left;
+  font-family: Tahoma, Geneva, Verdana, Arial, sans-serif;
+}
+
+button {
+  background-color: #dd7bfd;
+  border-radius: 2px;
+  border-color: blueviolet;
+  padding: 5px 25px;
+  font-size: 18px;
+  border: #333 1px solid;
+  display: inline-block;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+.trip-details {
+  background-color: #dd7bfd;
+  width: 600px;
+  margin: 25px 25px 0px 0px;
   padding: 1px 15px 15px 15px;
   border-radius: 5px;
   float: left;

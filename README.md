@@ -28,3 +28,4 @@ azure deploy
 format datepickers
 center buttons in form div
 copyright footer
+background pictures?
