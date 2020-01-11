@@ -37,8 +37,9 @@ button {
   font-size: 18px;
   border: #333 1px solid;
   display: inline-block;
-  margin: 0px 10px;
+  margin: 15px 10px 2px;
   cursor: pointer;
+  float: right;
 }
 
 .trip-details {

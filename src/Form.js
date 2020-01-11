@@ -8,11 +8,13 @@ export const Form = () => {
   const [returnDate, setReturnDate] = useState(new Date());
   const [passengerName, setPassengerName] = useState("Tu Nombre");
   const [passengerBirthday, setPassengerBirthday] = useState(
-    new Date(2020, 0, 1)
+    new Date(2000, 0, 1)
   );
   const [numPassengers, setNumPassengers] = useState(1);
   const [numBags, setNumBags] = useState(1);
-  const [showDetails, setShowDetails] = useState(false);
+  const [showDetails, setShowDetails] = useState(
+    typeof showDetails === undefined ? false : showDetails
+  );
 
   return (
     <div className="form">
@@ -134,11 +136,23 @@ export const Form = () => {
           </h2>
         </label>
         <div>
-          <button>Reset</button>
+          <button onClick={() => setShowDetails(false)}>Reset</button>
           <button onClick={() => setShowDetails(true)}>Submit</button>
         </div>
       </form>
-      {showDetails === true ? <Details /> : ""}
+      {showDetails === true ? (
+        <Details
+          destination={destination}
+          isRoundTrip={isRoundTrip}
+          departDate={departDate}
+          returnDate={returnDate}
+          passengerName={passengerName}
+          numPassengers={numPassengers}
+          numBags={numPassengers}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

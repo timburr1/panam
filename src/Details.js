@@ -1,9 +1,24 @@
 import React, { useState, useEffect } from "react";
 
-export const Details = () => {
+export const Details = ({
+  destination,
+  isRoundTrip,
+  departDate,
+  returnDate,
+  passengerName,
+  numPassengers,
+  numBags
+}) => {
   return (
     <div className="trip-details">
-      <h2>Trip Details Will Go Here.</h2>
+      <h2>Felicidades, {passengerName}, estas listo para Viajar!</h2>
+      <h2>Destino: {destination}</h2>
+      <h2>
+        Saliendo de Kellen Moore Aeropuerto Intergalactico en {departDate}
+      </h2>
+      {isRoundTrip === true ? <h2>Volviendo en {returnDate}</h2> : ""}
+      <h2>Pasajeros: {numPassengers}</h2>
+      <h2>Maletas: {numBags}</h2>
     </div>
   );
 };
