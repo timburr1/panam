@@ -4,13 +4,13 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export const Form = () => {
-  const [destination, setDestination] = useState("Madrid, Espana (MAD)");
+  const [destination, setDestination] = useState("Madrid, España (MAD)");
   const [isRoundTrip, setRoundTrip] = useState(true);
   const [departDate, setDepartDate] = useState(new Date());
   const [returnDate, setReturnDate] = useState(new Date());
   const [passengerName, setPassengerName] = useState("Tu Nombre");
   const [passengerBirthday, setPassengerBirthday] = useState(
-    new Date(2000, 0, 1)
+    new Date(2007, 0, 1)
   );
   const [numPassengers, setNumPassengers] = useState(1);
   const [numBags, setNumBags] = useState(1);
@@ -42,18 +42,22 @@ export const Form = () => {
               onBlur={event => setDestination(event.target.value)}
             >
               <option>Arendelle (FRZ)</option>
-              <option>Beunos Aires, Argentina (EZE)</option>
-              <option>Cuidad Crevase, Alderaan (ALD)</option>
+              <option>Buenos Aires, Argentina (EZE)</option>
+              <option>Ciudad Grieta, Alderaan (ALD)</option>
               <option>Habana, Cuba (HAV)</option>
-              <option>Madrid, Espana (MAD)</option>
-              <option>Mazatlan, Mexico (MZT)</option>
+              <option>La Paz, Bolivia (LAP)</option>
+              <option>Lima, Perú (LIM)</option>
+              <option>Madrid, España (MAD)</option>
+              <option>Mante, México (MNT)</option>
+              <option>Mazatlán, México (MZT)</option>
               <option>Meridian, Idaho, USA (KLN)</option>
+              <option>Santiago, Chile (SNT)</option>
             </select>
           </h2>
         </label>
         <label htmlFor="departDate">
           <h2>
-            Fecha de Ida:
+            Fecha de ida:
             <DatePicker
               showPopperArrow={false}
               selected={departDate}
@@ -63,7 +67,7 @@ export const Form = () => {
           </h2>
         </label>
         <label htmlFor="isRoundTrip">
-          <h2>Tipo de Viaje:</h2>
+          <h2>Tipo de viaje:</h2>
           <h3>
             <div className="radio">
               <label>
@@ -74,7 +78,7 @@ export const Form = () => {
                   checked={isRoundTrip === false}
                   onChange={event => setRoundTrip(false)}
                 />
-                Solo Ida
+                Solo ida
               </label>
               <label>
                 <input
@@ -84,7 +88,7 @@ export const Form = () => {
                   checked={isRoundTrip === true}
                   onChange={event => setRoundTrip(true)}
                 />
-                Ida y Vuelta
+                Ida y vuelta
               </label>
             </div>
           </h3>
@@ -92,7 +96,7 @@ export const Form = () => {
         {isRoundTrip === true ? (
           <label htmlFor="returnDate">
             <h2>
-              Fecha de Volver:
+              Fecha de vuelta:
               <DatePicker
                 showPopperArrow={false}
                 selected={returnDate}
@@ -106,7 +110,7 @@ export const Form = () => {
         )}
         <label htmlFor="passengerName">
           <h2>
-            Nombre de Pasajero:
+            Nombre de pasajero:
             <input
               id="passengerName"
               value={passengerName}
@@ -117,7 +121,7 @@ export const Form = () => {
         </label>
         <label>
           <h2>
-            Fecha de Nacimiento:
+            Fecha de nacimiento:
             <DatePicker
               showPopperArrow={false}
               selected={passengerBirthday}
