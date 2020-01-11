@@ -25,11 +25,8 @@ Azure Node.js Quickstart: https://docs.microsoft.com/en-us/azure/app-service/app
 
 # TODO
 
-submit button -> display trip details
+fix displayDetails
 grey out submit button until all fields are entered
 azure deploy
-
 format datepickers
-center buttons in form div
-copyright footer
 background pictures?

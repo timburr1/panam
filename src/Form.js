@@ -13,8 +13,11 @@ export const Form = () => {
   const [numPassengers, setNumPassengers] = useState(1);
   const [numBags, setNumBags] = useState(1);
   const [showDetails, setShowDetails] = useState(
-    typeof showDetails === undefined ? false : showDetails
+    false
+    //typeof showDetails === undefined ? false : showDetails
   );
+
+  //TODO: need handleSubmit() and handleReset() ?
 
   return (
     <div className="form">
@@ -28,7 +31,7 @@ export const Form = () => {
               onChange={event => setDestination(event.target.value)}
               onBlur={event => setDestination(event.target.value)}
             >
-              <option>Arendelle (FRZN)</option>
+              <option>Arendelle (FRZ)</option>
               <option>Beunos Aires, Argentina (EZE)</option>
               <option>Cuidad Crevase, Alderaan (ALD)</option>
               <option>Habana, Cuba (HAV)</option>
@@ -36,6 +39,17 @@ export const Form = () => {
               <option>Mazatlan, Mexico (MZT)</option>
               <option>Meridian, Idaho, USA (KLN)</option>
             </select>
+          </h2>
+        </label>
+        <label htmlFor="departDate">
+          <h2>
+            Fecha de Ida:
+            <input
+              id="departDate"
+              value={departDate.toString()}
+              type="date"
+              onChange={event => setDepartDate(event.target.value)}
+            />
           </h2>
         </label>
         <label htmlFor="isRoundTrip">
@@ -64,17 +78,6 @@ export const Form = () => {
               </label>
             </div>
           </h3>
-        </label>
-        <label htmlFor="departDate">
-          <h2>
-            Fecha de Ida:
-            <input
-              id="departDate"
-              value={departDate.toString()}
-              type="date"
-              onChange={event => setDepartDate(event.target.value)}
-            />
-          </h2>
         </label>
         {isRoundTrip === true ? (
           <label htmlFor="returnDate">
@@ -128,7 +131,7 @@ export const Form = () => {
           <h2>
             Maletas:
             <input
-              od="numBags"
+              id="numBags"
               value={numBags}
               type="number"
               onChange={event => setNumBags(event.target.value)}
