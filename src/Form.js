@@ -1,16 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Details } from "./Details";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-export const Form = ({}) => {
+export const Form = () => {
   const [destination, setDestination] = useState("Madrid, Espana (MAD)");
   const [isRoundTrip, setRoundTrip] = useState(true);
   const [departDate, setDepartDate] = useState(new Date());
   const [returnDate, setReturnDate] = useState(new Date());
   const [passengerName, setPassengerName] = useState("Tu Nombre");
   const [passengerBirthday, setPassengerBirthday] = useState(
-    new Date(2020, 0, 1)
+    new Date(2000, 0, 1)
   );
   const [numPassengers, setNumPassengers] = useState(1);
   const [numBags, setNumBags] = useState(1);
+  const [showDetails, setShowDetails] = useState(false);
+
+  const handleSubmit = () => {
+    event.preventDefault();
+    setShowDetails(true);
+  };
+
+  const convertDate = date => {
+    if (date === null) return null;
+
+    return (
+      date.getFullYear() + "/" + date.getMonth() + 1 + "/" + date.getDate()
+    );
+  };
 
   return (
     <div className="form">
@@ -24,7 +41,7 @@ export const Form = ({}) => {
               onChange={event => setDestination(event.target.value)}
               onBlur={event => setDestination(event.target.value)}
             >
-              <option>Arendelle (FRZN)</option>
+              <option>Arendelle (FRZ)</option>
               <option>Beunos Aires, Argentina (EZE)</option>
               <option>Cuidad Crevase, Alderaan (ALD)</option>
               <option>Habana, Cuba (HAV)</option>
@@ -34,6 +51,17 @@ export const Form = ({}) => {
             </select>
           </h2>
         </label>
+        <label htmlFor="departDate">
+          <h2>
+            Fecha de Ida:
+            <DatePicker
+              showPopperArrow={false}
+              selected={departDate}
+              onChange={date => setDepartDate(date)}
+              dateFormat="yyyy/MM/dd"
+            />
+          </h2>
+        </label>
         <label htmlFor="isRoundTrip">
           <h2>Tipo de Viaje:</h2>
           <h3>
@@ -41,46 +69,35 @@ export const Form = ({}) => {
               <label>
                 <input
                   type="radio"
-                  name="isRoundTrip"
-                  value={!isRoundTrip}
-                  checked={!isRoundTrip}
-                  onChange={event => setRoundTrip(!event.target.value)}
+                  name="oneWay"
+                  value={isRoundTrip === false}
+                  checked={isRoundTrip === false}
+                  onChange={event => setRoundTrip(false)}
                 />
                 Solo Ida
               </label>
               <label>
                 <input
                   type="radio"
-                  name="isRoundTrip"
-                  value={isRoundTrip}
-                  checked={isRoundTrip}
-                  onChange={event => setRoundTrip(event.target.value)}
+                  name="roundTrip"
+                  value={isRoundTrip === true}
+                  checked={isRoundTrip === true}
+                  onChange={event => setRoundTrip(true)}
                 />
                 Ida y Vuelta
               </label>
             </div>
           </h3>
         </label>
-        <label htmlFor="departDate">
-          <h2>
-            Fecha de Ida:
-            <input
-              id="departDate"
-              value={departDate.toString()}
-              type="date"
-              onChange={event => setDepartDate(event.target.value)}
-            />
-          </h2>
-        </label>
         {isRoundTrip === true ? (
           <label htmlFor="returnDate">
             <h2>
               Fecha de Volver:
-              <input
-                id="returnDate"
-                value={returnDate.toString()}
-                type="date"
-                onChange={event => setReturnDate(event.target.value)}
+              <DatePicker
+                showPopperArrow={false}
+                selected={returnDate}
+                onChange={date => setReturnDate(date)}
+                dateFormat="yyyy/MM/dd"
               />
             </h2>
           </label>
@@ -101,11 +118,11 @@ export const Form = ({}) => {
         <label>
           <h2>
             Fecha de Nacimiento:
-            <input
-              id="passengerBirthday"
-              value={passengerBirthday.toString()}
-              type="date"
-              onChange={event => setPassengerBirthday(event.target.value)}
+            <DatePicker
+              showPopperArrow={false}
+              selected={passengerBirthday}
+              onChange={date => setPassengerBirthday(date)}
+              dateFormat="yyyy/MM/dd"
             />
           </h2>
         </label>
@@ -124,16 +141,31 @@ export const Form = ({}) => {
           <h2>
             Maletas:
             <input
-              od="numBags"
+              id="numBags"
               value={numBags}
               type="number"
               onChange={event => setNumBags(event.target.value)}
             />
           </h2>
         </label>
-        <button>Reset</button>
-        <button>Submit</button>
+        <div>
+          <button onClick={() => setShowDetails(false)}>Reset</button>
+          <button onClick={() => handleSubmit()}>Submit</button>
+        </div>
       </form>
+      {showDetails === true ? (
+        <Details
+          destination={destination}
+          isRoundTrip={isRoundTrip}
+          departDate={convertDate(departDate)}
+          returnDate={convertDate(returnDate)}
+          passengerName={passengerName}
+          numPassengers={numPassengers}
+          numBags={numBags}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 };
