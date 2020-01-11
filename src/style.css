@@ -21,7 +21,7 @@ body {
 
 form {
   background-color: #29b4f5;
-  width: 490px;
+  width: 520px;
   margin: 0px 25px 0px 0px;
   padding: 1px 15px 15px 15px;
   border-radius: 5px;
@@ -40,6 +40,11 @@ button {
   margin: 15px 10px 2px;
   cursor: pointer;
   float: right;
+}
+
+input,
+select {
+  margin-left: 5px;
 }
 
 .trip-details {

@@ -23,10 +23,9 @@ React: https://reactjs.org/docs/rendering-elements.html
 Azure Fundamentals: https://docs.microsoft.com/en-us/learn/paths/azure-fundamentals/setup  
 Azure Node.js Quickstart: https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-nodejscontinuous
 
+[react-datepicker](https://www.npmjs.com/package/react-datepicker) is cool.
+
 # TODO
 
-fix displayDetails
-grey out submit button until all fields are entered
 azure deploy
-format datepickers
 background pictures?

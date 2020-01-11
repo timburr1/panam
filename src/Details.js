@@ -20,7 +20,7 @@ export const Details = ({
       <h2>Pasajeros: {numPassengers}</h2>
       <h2>Maletas: {numBags}</h2>
       <h2>
-        Explosivos son prohibidos
+        Explosivos son prohibidos -
         <br />
         Favor de llegar 1 hora temprano para el vuelo.
       </h2>
