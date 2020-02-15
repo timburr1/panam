@@ -25,7 +25,11 @@ export const Form = () => {
     if (date === null) return null;
 
     return (
-      date.getFullYear() + "/" + date.getMonth() + 1 + "/" + date.getDate()
+      date.getFullYear() +
+      "/" + //convert month from base 0:
+      (parseInt(date.getMonth()) + 1) +
+      "/" +
+      date.getDate()
     );
   };
 
