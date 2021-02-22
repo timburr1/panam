@@ -7,6 +7,7 @@ const App = () => {
     <React.StrictMode>
       <div>
         <header>¡Bienvenidos a Aerolínea PanAmerica!</header>
+        <h3>Hola, estudiantes del Colegio Centennial</h3>
         <br />
         <br />
         <Form />
