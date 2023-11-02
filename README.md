@@ -4,9 +4,17 @@ This is a fake travel website for Spanish language learners.
 
 I built it with React, based on Brian Holt's [Complete Intro to React v5](https://github.com/btholt/complete-intro-to-react-v5) course for [FrontEndMasters](https://frontendmasters.com/courses/complete-react-v5/). This was overkill, but I needed to learn React for work.
 
-To run it, make sure you have [Node.js](https://nodejs.org/en/), [npm](https://www.npmjs.com/get-npm), and [Parcel](https://parceljs.org/) installed.
+## Prerequisites
 
-Open a terminal in Visual Studio Code or using PowerShell, cd into the project root, and run 'npm run dev'.
+- [**Node.js**](https://nodejs.org/en/download/package-manager/)
+- [**Visual Studio Code**](https://code.visualstudio.com/)
+
+Open this project in VS Code. Launch a new terminal, and run
+
+```
+$ npm install
+$ npm run dev
+```
 
 Some helpful VSCode extensions:
 
