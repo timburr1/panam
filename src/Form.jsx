@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { Details } from "./Details";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -10,7 +10,7 @@ export const Form = () => {
   const [returnDate, setReturnDate] = useState(new Date());
   const [passengerName, setPassengerName] = useState("Tu Nombre");
   const [passengerBirthday, setPassengerBirthday] = useState(
-    new Date(2007, 0, 1)
+    new Date(2010, 0, 1)
   );
   const [numPassengers, setNumPassengers] = useState(1);
   const [numBags, setNumBags] = useState(1);

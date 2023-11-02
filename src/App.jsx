@@ -1,18 +1,20 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import { Form } from "./Form";
+import LOGO_URL from "./images/logo.png";
 
 const App = () => {
   return (
-    <React.StrictMode>
+    <>
+    <div id="logo">
+    <img src={LOGO_URL} width="320" align="right" />
+  </div>
       <div>
         <header>¡Bienvenidos a Aerolínea PanAmerica!</header>
         <br />
         <br />
         <Form />
       </div>
-    </React.StrictMode>
+      </>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App
