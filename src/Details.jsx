@@ -16,6 +16,9 @@ export const Details = ({
       case "Arendelle (FRZ)":
         basePrice = 240.0;
         break;
+      case "Boise, Idaho, USA (BOI)":
+          basePrice = 25.0;
+          break;
       case "Buenos Aires, Argentina (EZE)":
         basePrice = 325.0;
         break;
@@ -40,9 +43,6 @@ export const Details = ({
       case "Mazatlán, México (MZT)":
         basePrice = 350.5;
         break;
-      case "Meridian, Idaho, USA (KLN)":
-        basePrice = 25.0;
-        break;
       case "Santiago, Chile (SNT)":
         basePrice = 720.12;
         break;
@@ -62,7 +62,7 @@ export const Details = ({
       <br />
       <h2>Destino: {destination}</h2>
       <h2>
-        Saliendo del Aeropuerto Intergaláctico Kellen Moore en {departDate}
+        Saliendo del Aeropuerto de Boise (BOI) en {departDate}
       </h2>
       {isRoundTrip === true ? <h2>Volviendo {returnDate}</h2> : ""}
       <h2>Pasajeros: {numPassengers}</h2>

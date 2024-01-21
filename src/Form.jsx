@@ -10,7 +10,7 @@ export const Form = () => {
   const [returnDate, setReturnDate] = useState(new Date());
   const [passengerName, setPassengerName] = useState("Tu Nombre");
   const [passengerBirthday, setPassengerBirthday] = useState(
-    new Date(2010, 0, 1)
+    new Date(2009, 0, 1)
   );
   const [numPassengers, setNumPassengers] = useState(1);
   const [numBags, setNumBags] = useState(1);
@@ -46,6 +46,7 @@ export const Form = () => {
               onBlur={event => setDestination(event.target.value)}
             >
               <option>Arendelle (FRZ)</option>
+              <option>Boise, Idaho, USA (BOI)</option>
               <option>Buenos Aires, Argentina (EZE)</option>
               <option>Ciudad Grieta, Alderaan (ALD)</option>
               <option>Habana, Cuba (HAV)</option>
@@ -54,7 +55,6 @@ export const Form = () => {
               <option>Madrid, España (MAD)</option>
               <option>Mante, México (MNT)</option>
               <option>Mazatlán, México (MZT)</option>
-              <option>Meridian, Idaho, USA (KLN)</option>
               <option>Santiago, Chile (SNT)</option>
             </select>
           </h2>

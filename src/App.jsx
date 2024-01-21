@@ -8,7 +8,7 @@ const App = () => {
     <img src={LOGO_URL} width="320" align="right" />
   </div>
       <div>
-        <header>¡Bienvenidos a Aerolínea PanAmerica!</header>
+        <header>¡Bienvenidos a Aerolínea PanAmérica!</header>
         <br />
         <br />
         <Form />
