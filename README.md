@@ -1,4 +1,4 @@
-# Aerolínea PanAmerica
+# Aerolínea PanAmérica
 
 This is a fake travel website for Spanish language learners.
 
