@@ -10,7 +10,7 @@ export const Form = () => {
   const [returnDate, setReturnDate] = useState(new Date());
   const [passengerName, setPassengerName] = useState("Tu Nombre");
   const [passengerBirthday, setPassengerBirthday] = useState(
-    new Date(2009, 0, 1)
+    new Date(2010, 0, 1)
   );
   const [numPassengers, setNumPassengers] = useState(1);
   const [numBags, setNumBags] = useState(1);
