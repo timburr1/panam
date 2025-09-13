@@ -1,4 +1,7 @@
 # Aerolínea PanAmérica
+![](https://img.shields.io/github/repo-size/timburr1/panam)
+![](https://img.shields.io/github/contributors/timburr1/panam)
+![](https://img.shields.io/github/last-commit/timburr1/panam)
 
 This is a fake travel website for Spanish language learners.
 
