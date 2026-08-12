@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { Details } from "./Details";
-import DatePicker from "react-datepicker";
+import DatePickerModule from "react-datepicker"; 
 import "react-datepicker/dist/react-datepicker.css";
+
+const DatePicker = DatePickerModule.default || DatePickerModule;
 
 export const Form = () => {
   const [destination, setDestination] = useState("Madrid, España (MAD)");
